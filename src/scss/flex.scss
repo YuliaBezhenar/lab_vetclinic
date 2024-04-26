@@ -1,0 +1,27 @@
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex_column(){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex_no_center(){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1{
+        color: $green;
+    }
+}
+@mixin flex-column-left(){
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

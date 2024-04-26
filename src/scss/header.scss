@@ -1,0 +1,75 @@
+@import 'base';
+@import 'flex';
+@import 'components';
+
+.logo{
+    background: url(../img/logo_paw.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.account{
+    background: url(../img/Xnix.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.menu{
+    @include flex_no_center();
+    flex-wrap: nowrap;
+    font-family: $p-font-family;
+    font-size: $p-font-size;
+    padding-top: 42px;
+    padding-bottom: 20px;
+}
+
+.main-menu{
+    @include flex();
+    flex-wrap: wrap;
+}
+
+li{
+    a{
+        @include flex();
+
+        width: $menu-button-width;
+        height: $menu-height;
+        font-size: $menu-font-size;
+        color: $black;
+        &:hover{
+            color: $green;
+        }
+    }
+}
+
+.main-menu-button{
+    @include button($white, $green);
+    &:hover{
+        @include button($white, $shade-green);
+    }
+    &:active{
+        @include button($white, $forest-green);
+    }
+}
+
+
+.header-content{
+    @include flex_no_center();
+    height: 79.19vh;
+}
+.header-content-img{
+    background-image: url(../img/main-img.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60%;
+    height: 100%;
+}
+.header-content-text{
+    @include flex_column();
+    text-align: left;
+    width: 40%;
+}

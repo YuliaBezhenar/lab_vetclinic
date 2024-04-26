@@ -1,0 +1,50 @@
+main 
+    section.about
+        h1 Про клініку
+        div.about-content
+            div.text
+                p Здоров’я наших домашніх улюбленців є дуже важливим і якщо ви щось запідозрили - не варто зволікати! Навіть якщо з’являються якісь непомітні дивні симптоми - радимо вам завітати до нас на консультацію. Ветеринари у клініці “Лапка” дбайливо та спостережливо ставляться до тваринок, а також забезпечують якісне лікування.
+                p Також наша клініка оснащена сучасним обладнанням, і ми дотримуємося європейських стандартів у наданні ветеринарних послуг. Довірте своїх улюбленців нам, ми зробимо все, щоб ви почувалися щасливим лапкогосподарем!
+                a.about-button(href="#form") Записатися на прийом
+            div.about-content-img
+            
+    section#about.why-us
+         h1 Чому саме ми?
+         div.cards
+            each name in ['Професійне та сучасне лікування', 'Доброзичливість до тваринок', 'Прийнятні ціни', 'Широкий спектр послуг', 'Гарні відгуки клієнтів', 'Сучасність клініки']
+                div.card
+                    div.card-icon
+                    p=name
+    section#services.services 
+        h1 Послуги
+        ul.services-list
+            each name in ['Вакцинація', 'Хірургія', 'УЗД', 'Онкологія', 'Лабараторні аналізи', 'Консультація', 'Прийом дерматолога', 'Прийом кардіолога', 'Прийом офтальмолога', 'Нефрологія']
+                li
+                    p=name
+                    p 100 UAH 
+    
+    section#form.form
+       .container
+            h1 Записатися на прийом
+            //input(type="text", placeholder="Оберіть послугу")
+            //input(type="text", placeholder="Оберіть ветеринара")
+            select(name="service", id="service")
+                option(value="") Оберіть послугу
+                option(value="1") Послуга 1
+                option(value="2") Послуга 2
+                option(value="3") Послуга 3
+                option(value="4") Послуга 4
+            select(name="vet", id="vet")
+                option(value="") Оберіть ветеринара
+                option(value="1") Ветеринар 1
+                option(value="2") Ветеринар 2
+                option(value="3") Ветеринар 3
+                option(value="4") Ветеринар 4
+            container.date-time 
+                input(type="date", id="date" required, placeholder="Дата")
+                input(type="time", id="time" required, placeholder="Час")
+            input(type="tel", id="phone" placeholder="Номер телефону", pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}", required)
+            button.submit-button(type="button") Записатися на прийом
+
+
+    

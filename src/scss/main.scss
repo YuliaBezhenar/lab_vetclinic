@@ -1,0 +1,202 @@
+@import 'header';
+@import 'footer';
+@import 'base';
+@import 'components';
+
+html{
+    font-size: $p-font-size;
+    color: $black;
+    background-color: $white;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: auto;
+    text-align: center;
+}
+
+header, main{
+    padding: $padding;
+    margin: 20px 0;
+}
+footer{
+    padding-top: 160px;
+}
+h1{
+    font-family: $h-1-font-family;
+    font-size: $h-1-font-size;
+    font-weight: $font-weight;
+}
+h2{
+    font-family: $h-2-font-family;
+    font-size: $h-2-font-size;
+    font-weight: $font-weight;
+}
+p{
+    font-family: $p-font-family;
+    font-size: $p-font-size;
+    font-weight: $font-weight;
+}
+
+
+.about{
+    padding-top: 76px;
+    h1{
+        color: $forest-green;
+    }
+    @include flex_column();
+    gap: 42px;
+}
+.about-content{
+    @include flex();
+    height: 520px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.text{
+    @include flex-column-left();
+    p{
+        line-height: 1.5;
+        text-align: left;
+    }
+    gap: 42px;
+    width: 54%;
+}
+.about-content-img{
+    background-image: url(../img/about-photo.png);
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 40%;
+    background-size: contain;
+}
+
+.about-button {
+    font-size: $p-font-size;
+    font-family: $p-font-family;
+    @include submit_button($forest-green, $white);
+
+    &:hover {
+        @include submit_button($forest-green, $light-green);
+    }
+
+    &:active {
+        @include submit_button($white, $green);
+    }
+}
+
+.why-us{
+    padding-top: 120px;
+    h1{
+        color: $forest-green;
+    }
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card{
+    height: 222px;
+    padding: 40px 47px;
+    margin-top: 40px;
+    @include flex_column();
+    gap: 18px;
+    border: 2px solid;
+    border-color: $forest-green;
+    border-radius: 12px;
+    box-shadow: $shadow;
+    transition: box-shadow 0.3s ease;
+    &:hover{
+        box-shadow: none;
+        border-color: $green;
+    }
+}
+.card-icon{
+    background-image: url(../img/heart.svg);
+    height: 56px;
+    width: 56px;
+}
+
+.services{
+    h1{
+        color: $forest-green;
+    }
+    padding-top: 120px;
+}
+
+.services-list{
+    padding-top: 42px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    p{
+        color: $dark-green
+    }
+    li{
+        @include flex_no_center();
+        padding: 18px 30px;
+        border-top: 3px solid;
+        border-color: $green;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+        &:hover{
+            background-color: $light-green;
+            border-color: $forest-green;
+            cursor: default;
+        }
+    }
+
+}
+
+.form{
+    padding-top: 120px;
+    h1{
+        color: $forest-green;
+    }
+}
+
+.container {
+    text-align: center;
+    background-color: $white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: $shadow;
+    @include flex_column();
+
+    h1{
+        color: $forest-green;
+        padding-bottom: 70px;
+    }
+
+    input, select {
+        width: 547px;
+        font-family: $p-font-family;
+        font-size: $p-font-size;
+        color: $shade-forest-green;
+        margin-bottom: 42px;
+        padding: 16px 20px;
+        border: 1px solid $shade-forest-green;
+        border-radius: 5px;
+        background-color: $light-green;
+    }
+}
+.submit-button{
+    font-family: $p-font-family;
+    font-size: $p-font-size;
+    @include submit_button($forest-green, $white);
+    &:hover {
+        @include submit_button($forest-green, $light-green);
+    }
+
+    &:active {
+        @include submit_button($white, $green);
+    }
+}
+.date-time{
+    @include flex();
+    width: 547px;
+    input{
+        width: 248px;
+    }
+    justify-content: space-between;
+}

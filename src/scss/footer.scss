@@ -1,0 +1,22 @@
+@import 'base';
+@import 'flex';
+
+.footer{
+    @include flex_no_center();
+    background-color: $forest-green;
+    justify-content: flex-start;
+    gap: 170px;
+    padding: 42px 80px 66px 80px;
+}
+
+.footer-container{
+    p{
+        cursor: default;
+        color: $light-green;
+        &:hover{
+            color: $white;
+        }
+    }
+    gap: 10px;
+    @include flex-column-left();
+}

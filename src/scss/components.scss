@@ -1,0 +1,25 @@
+@import 'base';
+
+@mixin button($color, $bg_color) {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 38px;
+    padding: 10px 22px;
+    background-color: $bg_color;
+    color: $color;
+}
+
+@mixin submit_button($color, $bg_color) {
+    align-items: center;
+    background-color: $bg_color;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 38px;
+    padding: 22px 40px;
+    border: 1px solid;
+    border-color: $green;
+    color: $color;
+}
